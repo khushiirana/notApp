@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-obsidian: #050505;
+        --color-charcoal: #121212;
+        --color-gold: #FFD700;
+        --color-neon-cyan: #00F3FF;
+        --color-glass: rgba(255, 255, 255, 0.05);
+    }
+
+    body {
+        @apply bg-[var(--color-obsidian)] text-white font-sans overflow-x-hidden;
+        background-image:
+            radial-gradient(circle at 50% 50%, rgba(0, 243, 255, 0.03) 0%, transparent 50%),
+            linear-gradient(rgba(255, 215, 0, 0.01) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 215, 0, 0.01) 1px, transparent 1px);
+        background-size: 100% 100%, 40px 40px, 40px 40px;
+    }
+}
+
+@layer utilities {
+    .text-neon-cyan {
+        color: var(--color-neon-cyan);
+        text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    }
+
+    .text-gold {
+        color: var(--color-gold);
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    .bg-glass {
+        background: var(--color-glass);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .bg-glass-heavy {
+        background: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+
+    .shadow-neon {
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.3), inset 0 0 10px rgba(0, 243, 255, 0.1);
+    }
+
+    .shadow-gold {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(255, 215, 0, 0.1);
+    }
+
+    .border-neon {
+        border: 1px solid var(--color-neon-cyan);
+        box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+    }
+
+    .border-gold {
+        border: 1px solid var(--color-gold);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+
+    .antigravity-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(-15px) rotate(1deg);
+        }
+
+        100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neon-cyan);
+}

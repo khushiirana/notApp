@@ -1,0 +1,31 @@
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Backend (Spring Boot / Maven)
+backend/target/
+backend/*.log
+backend/.mvn/
+backend/target/
+
+# Frontend (Node / React / Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/npm-debug.log*
+frontend/yarn-error.log*
+frontend/yarn-debug.log*
+
+# Global ignores
+node_modules/
+target/
+dist/
+build/
+
+# OS Files
+.DS_Store
+Thumbs.db
