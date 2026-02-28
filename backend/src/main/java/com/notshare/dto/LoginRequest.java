@@ -3,10 +3,7 @@ package com.notshare.dto;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-public class UserDTO {
-
-    @NotBlank
-    private String name;
+public class LoginRequest {
 
     @Email
     @NotBlank
@@ -15,10 +12,7 @@ public class UserDTO {
     @NotBlank
     private String password;
 
-    public UserDTO() {}
-
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public LoginRequest() {}
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
