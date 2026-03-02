@@ -1,5 +1,4 @@
 package com.notshare.security;
-
 import com.notshare.model.User;
 import com.notshare.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
